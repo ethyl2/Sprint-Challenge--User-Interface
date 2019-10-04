@@ -71,11 +71,72 @@ p {
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 800px;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+
+}
+
+/* Pulse is from https://www.tutorialspoint.com/css/css_animation_pulse.htm*/
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+ }
+
+
+@keyframes tada {
+    0% {transform: scale(1);} 
+    10%, 20% {transform: scale(0.9) rotate(-3deg);} 
+    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);} 
+    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);} 
+    100% {transform: scale(1) rotate(0);} 
+ } 
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 0 2.25rem;
+}
+
+nav a:hover {
+    animation-name: pulse;
+    animation-duration: 4s;
+    color: gray;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    margin-top: 2rem;
     border-bottom: 1px dashed black;
 }
 
@@ -83,6 +144,10 @@ p {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
+}
+
+.about-page .top-content .text-container {
+    width: 97%;
 }
 
 .middle-content {
@@ -112,6 +177,92 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box:hover {
+    color: black;
+    animation-name: tada;
+    animation-duration: 4s;
+}
+
+.middle-content .boxes .box:first-child {
+    background-color: #008080;
+}
+
+.middle-content .boxes .box:nth-child(2) {
+    background-color: #FFD700;
+}
+
+.middle-content .boxes .box:nth-child(3) {
+    background-color: #5F9EA0;
+}
+
+.middle-content .boxes .box:nth-child(4) {
+    background-color: #FF7F50;
+}
+
+.middle-content .boxes .box:nth-child(5) {
+    background-color: #DC143C;
+}
+
+.middle-content .boxes .box:nth-child(6) {
+    background-color: #008080;
+}
+
+.middle-content .boxes .box:nth-child(7) {
+    background-color: #9932CC;
+}
+
+.middle-content .boxes .box:nth-child(8) {
+    background-color: #FF69B4;
+}
+
+.middle-content .boxes .box:nth-child(9) {
+    background-color: #4B0082;
+}
+
+.middle-content .boxes .box:nth-child(10) {
+    background-color: #1E90FF;
+}
+
+.middle1, .middle2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.middle2 {
+    margin-top: 2rem;
+}
+
+.about-box {
+    width: 48%;
+    border-bottom: 1px dashed black;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.about-box h2 {
+    padding: 0.75rem 0;
+}
+
+.about-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.about-box a:hover {
+    color: #FFB63F;
+}
+
+.about-box a h4 {
+    width: 30%;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-top: 0.5rem;
+}
+
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -124,6 +275,10 @@ p {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+.about-page .bottom-content {
+    margin: 2rem 0;
 }
 
 footer {
@@ -143,4 +298,57 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* Contact Page Styles */
+
+.contact-page .top-content {
+    border: none;
+}
+.contact-page .top-content .text-container {
+    width: 100%;
+}
+
+.contact-form-area {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    margin: 2em auto;
+    border: 1px dashed black;
+}
+
+.contact-form {
+    width: 80%;
+    padding: 4em 2em;
+}
+
+input, label, textarea{
+    width:100%;
+    margin:4% 0;
+}
+
+input, textarea{
+    border:none;
+    border-bottom:3px solid gray;
+    background: #EAE7E0;
+}
+
+button {
+    width:100%;
+    background: #694C92;
+    color: white;
+    padding: 1em;
+    margin-top: 2em;
+    font-family: Bangers, sans-serif;
+    border-radius: 2px;
+    border: 1px solid black;
+
+  }
+
+button:hover {
+    color: gray;
+    animation-name: pulse;
+    animation-duration: 10s;
 }
