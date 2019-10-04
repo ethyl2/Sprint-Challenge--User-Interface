@@ -93,8 +93,15 @@ nav a {
     padding: 0 2.25rem;
 }
 
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
 .img-container img {
-    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .top-content {
@@ -196,8 +203,8 @@ nav a {
 .about-box {
     width: 48%;
     border-bottom: 1px dashed black;
-    background-color: yellow;
     margin-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .about-box h2 {
