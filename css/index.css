@@ -81,6 +81,23 @@ header {
     padding-bottom: 1rem;
 
 }
+
+/* Pulse is from https://www.tutorialspoint.com/css/css_animation_pulse.htm*/
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+ }
+
+
+@keyframes tada {
+    0% {transform: scale(1);} 
+    10%, 20% {transform: scale(0.9) rotate(-3deg);} 
+    30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);} 
+    40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);} 
+    100% {transform: scale(1) rotate(0);} 
+ } 
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -91,6 +108,16 @@ nav a {
     color: black;
     text-decoration: none;
     padding: 0 2.25rem;
+}
+
+nav a:hover {
+    animation-name: pulse;
+    animation-duration: 4s;
+    color: gray;
+}
+
+.active {
+    font-weight: bold;
 }
 
 .img-container {
@@ -148,6 +175,12 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.middle-content .boxes .box:hover {
+    color: black;
+    animation-name: tada;
+    animation-duration: 4s;
 }
 
 .middle-content .boxes .box:first-child {
@@ -214,6 +247,10 @@ nav a {
 .about-box a {
     text-decoration: none;
     color: black;
+}
+
+.about-box a:hover {
+    color: #FFB63F;
 }
 
 .about-box a h4 {
