@@ -112,6 +112,10 @@ nav a {
     padding-bottom: 20px;  
 }
 
+.about-page .top-content .text-container {
+    width: 97%;
+}
+
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -179,6 +183,41 @@ nav a {
     background-color: #1E90FF;
 }
 
+.middle1, .middle2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.middle2 {
+    margin-top: 2rem;
+}
+
+.about-box {
+    width: 48%;
+    border-bottom: 1px dashed black;
+    background-color: yellow;
+    margin-top: 1rem;
+}
+
+.about-box h2 {
+    padding: 0.75rem 0;
+}
+
+.about-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.about-box a h4 {
+    width: 30%;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-top: 0.5rem;
+}
+
 
 .bottom-content {
     display: flex;
@@ -192,6 +231,10 @@ nav a {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+.about-page .bottom-content {
+    margin: 2rem 0;
 }
 
 footer {
