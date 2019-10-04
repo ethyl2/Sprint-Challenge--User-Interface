@@ -32,15 +32,41 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. If you were to describe semantic HTML to the next cohort of students, what would you say?
+1. If you were to describe semantic HTML to the next cohort of students, what would you say? 
+
+They are tags that have words with more meaning to describe the type of content that they hold. <main>, <header> and <nav> provide more description about what they contain than <div> and <span> do, for example.
+
+---------
 
 2. Name two big differences between ```display: block;``` and ```display: inline;```.
+    Display:block elements each have their own line of content, as though there is a <br> element after each of them. They have a width of 100% by default.
+
+    Display:inline elements do not start on a new line. They only take as much width as they need.
+
+---------- 
 
 3. What are the 4 areas of the box model?
 
+    1. Content Area: contains the actual item
+    2. Padding Area: space around the item, contained within the border and/or margin.
+    3. Border Area: space around the padding area.
+    4. Margin Area: space around the padding area.
+
+--------------
+
 4. While using flexbox, what axis does the following property work on: ```align-items: center```?
 
+That property works on the **cross-axis**. When flex-direction is set to row, it is the y-axis. Flex-direction: column will set it to the x-axis.
+
+---------------
+
 5. Explain why git is valuable to a team of developers.
+
+Git allows teams to work on projects together, each checking out a version of the project to work from. Then their versions can be merged together by resolving conflicts and merging branches. Multiple branches can be used for different phases of development, such as having a branch to work on a specific feature before including it in the main, deployed branch once it is tested and ready.
+
+------------------
+
+
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
